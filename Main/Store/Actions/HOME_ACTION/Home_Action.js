@@ -41,8 +41,8 @@ export const HOME_FUNCTION = () => {
     axios.get("https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php", {
       method: "GET",
       headers: {
-        "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-        "x-rapidapi-key": "33c4040488mshb9d509c308b46dbp1202f1jsn5836197eee5d"
+        "x-rapidapi-host": "YOUR_HOST_ADDRESS",
+        "x-rapidapi-key": "YOUR_API_KEY"
       }
     }).then(res => {
       if(res.data != null){
@@ -66,8 +66,8 @@ export const FETCH_COUNTRY_DATA = (country) => {
     axios.get("https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=" + country, {
       method: "GET",
       headers: {
-        "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-        "x-rapidapi-key": "33c4040488mshb9d509c308b46dbp1202f1jsn5836197eee5d"
+        "x-rapidapi-host": "YOUR_HOST_ADDRESS",
+        "x-rapidapi-key": "YOUR_API_KEY"
       }
     }).then(res => {
       if(res.data != null){
@@ -89,8 +89,8 @@ export const HOME_COVID_TOTAL_FUNCTION = () => {
     axios.get("https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php", {
       method: "GET",
       headers: {
-        "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-        "x-rapidapi-key": "33c4040488mshb9d509c308b46dbp1202f1jsn5836197eee5d"
+        "x-rapidapi-host": "YOUR_HOST_ADDRESS",
+        "x-rapidapi-key": "YOUR_API_KEY"
       }
     }).then(res => {
         dispatch(HOME_WORLD_COVID_SUCCESS(res.data));
