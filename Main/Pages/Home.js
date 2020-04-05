@@ -11,7 +11,6 @@ import { ERROR_DIALOG_FUNCTION } from '../Store/Actions/ERROR_ACTION/ErrorCompon
 import Icon from 'react-native-vector-icons/AntDesign';
 import NetInfo from "@react-native-community/netinfo";
 import { HOME_FUNCTION, HOME_COVID_TOTAL_FUNCTION, FETCH_COUNTRY_DATA, HOME_COUNTRY_COVID_START } from '../Store/Actions/HOME_ACTION/Home_Action';
-import { AdMobBanner, AdMobInterstitial } from 'react-native-admob';
 import changeNavigationBarColor from 'react-native-navigation-bar-color';
 
 
@@ -68,14 +67,8 @@ class Home extends React.Component {
     }
   }
 
-  showAD = () => {
-    AdMobInterstitial.setAdUnitID('ca-app-pub-9629092505681633/2344139615');
-    AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
-    AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
-  }
 
   fetchCountryData = async () => {
-    this.showAD();
     this.setState({ isCountryAvailable: true });
     if (this.state.country != '') {
       try {
@@ -92,7 +85,6 @@ class Home extends React.Component {
   }
 
   fetchSpecificCountryData = (country) => {
-    this.showAD();
     this.setState({ isCountryAvailable: true });
     try {
       this.props.fetchCountryData(country);
@@ -167,9 +159,6 @@ class Home extends React.Component {
                     <Picker.Item label="No Data Available." value='' />}
                 </Picker>
                 <Button icon='account-search' loading={this.state.isCountryAvailable} mode="contained" onPress={() => this.fetchCountryData()}>Look Up</Button>
-              </View>
-              <View style={styles.adStyle}>
-                <AdMobBanner adSize="fullBanner" adUnitID="ca-app-pub-9629092505681633/6472986698" testDevices={[AdMobBanner.simulatorId]} onAdFailedToLoad={error => console.log(error)}/>
               </View>
               {this.props.countryData != null ? this.props.countryData.latest_stat_by_country.map((data, index) => {
                 return (
@@ -302,9 +291,6 @@ const styles = StyleSheet.create({
   cardTimeSubTitleStyle: {
     fontSize: 8, 
     fontWeight:"bold"
-  },
-  adStyle: {
-    marginVertical: 5
   }
 });
 
