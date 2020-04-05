@@ -1,0 +1,42 @@
+// APP Name
+
+const AppDetails = {
+  APP_NAME: "COVID-CORONA",
+  APP_MOTO: "Lifes at risk."
+};
+
+// APP NAVIGATION Js  
+
+const NavigationConstant = {
+  AUTH: "AUTH_STACK",
+  MAIN: "Main",
+  APP: "APP_STACK",
+  Home: "HOME_SCREEN",
+  Get_Start: "GET_START_SCREEN",
+  AppLoading: "APP_LOADING_SCREEN",
+};
+
+// ALL API Js
+const HTTP_BASENAME =  "http://13.234.204.223/api/";
+const API = {
+  EMAIL_CHECKER_API: HTTP_BASENAME + 'emailChecker',
+  REGISTER_EMAIL_API: HTTP_BASENAME + 'register',
+  LOGIN_API: HTTP_BASENAME + 'login',
+  LOGOUT_API: HTTP_BASENAME + 'logout',
+  TYLO_GEO_DATA_SAVE_API: HTTP_BASENAME + 'geoDataSave',
+  TYLO_GEO_DATA_FETCH_API: HTTP_BASENAME + 'geoDataFetch',
+  TYLO_NEW_MEMBER_ADD_API: HTTP_BASENAME + 'tyloMemberAddNew',
+  TYLO_MEMBER_ACTION_API: HTTP_BASENAME + 'tyloMemberAction',
+  TYLO_MEMBER_ACTION_FIXER_API: HTTP_BASENAME + 'tyloMemberActionFixer',
+  TYLO_MEMBER_ESSENTIAL_FETCH_API: HTTP_BASENAME + 'tyloMemberEssentialFetch',
+  TYLO_MEMBER_DATA_RELOAD_API: HTTP_BASENAME + 'tyloMemberDataReload',
+  TYLO_MEMBER_IMAGE_UPLOAD_API: HTTP_BASENAME + 'tyloMemberImageUpload',
+};
+
+const GOOGLE_API_KEY = 'AIzaSyBAdaTumabknuqLJ752bTIznoFwAqZ8fCo';
+const GOOGLE_AD_MOB_INTERSTITIAL_KEY = 'ca-app-pub-9629092505681633/1991507161';
+const GOOGLE_AD_MOB_BANNER_KEY = 'ca-app-pub-9629092505681633~4800313967';
+
+
+export { AppDetails, NavigationConstant, API, GOOGLE_API_KEY, 
+  GOOGLE_AD_MOB_INTERSTITIAL_KEY, GOOGLE_AD_MOB_BANNER_KEY };
