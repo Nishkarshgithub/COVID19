@@ -33,7 +33,7 @@
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
       <meta-data 
         android:name="com.google.android.gms.ads.APPLICATION_ID" 
-        android:value="ca-app-pub-9629092505681633~1412231702"/>
+        android:value="ca-app-pub-XXXXXXXXXXXXXXXXXXXXXXXXX"/>
 
     </application>
 
